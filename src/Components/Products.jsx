@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -14,16 +12,15 @@ import ProductGrid from './ProductGrid'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: '50%'
   },
   paper: {
-    padding: theme.spacing(2),
-    margin: '15px',
-   
+    
   },
   image: {
     width: 100,
     height: 100,
-    padding: '18px'
+    padding: '15px'
   },
   img: {
     margin: 'auto',
@@ -38,10 +35,13 @@ export default function ComplexGrid() {
 
   return (
     <div className={classes.root}>
+      
       <Paper className={classes.paper}>
-          <ProductGrid/>
+          {/* <ProductGrid/> */}
         <Grid container spacing={1}>
-          <Grid item>
+          <Typography  style={{backgroundColor: '#11f555', fontSize: '1rem'}}>Get 35% off</Typography>
+          <Grid item style={{marginLeft:'75px'}}>
+            
             <ButtonBase className={classes.image}>
               <img className={classes.img} alt="complex" src={onion} />
               <Typography style={{float:'inline', padding:'5px', marginLeft:'15px'}}> Fresh onion <br/> <br/>
@@ -53,9 +53,9 @@ export default function ComplexGrid() {
            
           </Grid>
           <Grid item xs={12} lg container style={{width: '100%'}}>
-              <paper style={{backgroundColor:'#deddd9',}}>
-            <Grid item xs container direction="column" spacing={1}>
-              <Grid item xs>
+              <paper style={{backgroundColor:'#deddd9', width: '100%'}}>
+            <Grid item xs container direction="column" spacing={1} style={{marginLeft:'15px'}}>
+              <Grid item xs >
                 <Typography gutterBottom variant="subtitle1">
                   MRP: 18.81$
                 </Typography>
@@ -77,6 +77,8 @@ export default function ComplexGrid() {
           
         </Grid>
       </Paper>
+      
+      
     </div>
   );
 }

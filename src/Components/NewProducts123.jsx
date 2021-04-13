@@ -4,24 +4,22 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import ProductButton from './ProductButton2';
+
 import palak from './images/palak.webp';
-import ProductButton from './ProductButton';
-import ProductGrid from './ProductGrid'
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   paper: {
     padding: theme.spacing(2),
-    margin: '15px',
-   
+    margin: 'auto',
+    maxWidth: '180px',
+    float: 'left'
   },
   image: {
-    width: 100,
-    height: 100,
-    padding: '18px'
+    width: 128,
+    height: 128,
   },
   img: {
     margin: 'auto',
@@ -37,43 +35,36 @@ export default function ComplexGrid() {
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
-          <ProductGrid/>
-        <Grid container spacing={1}>
-          <Grid item style={{marginLeft:'75px'}}>
+        <Grid container spacing={2}>
+          <Grid item>
+              <Typography style={{  fontWeight:'bold' , float:'left', backgroundColor:'#148034'}}>Get 20% off</Typography>
             <ButtonBase className={classes.image}>
-              <img className={classes.img} alt="complex" src={palak} style={{marginLeft:'75px'}} />
-              <Typography style={{float:'inline', padding:'5px', marginLeft:'15px'}}> Fresh Palak <br/> <br/>
-              1kg
-              
-              </Typography>
-              
+              <img className={classes.img} alt="complex" src={palak } />
             </ButtonBase>
-           
           </Grid>
-          <Grid item xs={12} lg container style={{width: '100%'}}>
-              <paper style={{backgroundColor:'#deddd9', width: '100%'}}>
+          <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={1}>
               <Grid item xs>
-                <Typography gutterBottom variant="subtitle1">
-                  MRP: 18.81$
+                <Typography >
+                  Fresh-palak
                 </Typography>
-                <Typography variant="body2" gutterBottom>
-                 Standard delivery tommorow
+                <Typography >
+                  1 kg
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  5:00pm tp 7:00pm
+
+                <Typography >
+                  $20
                 </Typography>
+               
               </Grid>
-            
             </Grid>
             <Grid item>
-              <ProductButton/>
+              <Typography > <ProductButton /></Typography>
             </Grid>
-            </paper>
-            
           </Grid>
           
         </Grid>
+        
       </Paper>
     </div>
   );

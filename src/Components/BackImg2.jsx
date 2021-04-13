@@ -5,7 +5,7 @@ function myimg2() {
     return (
         <div>
     
-            <img src={Back2} style={{width:'100%', marginTop:'20px'}} alt=""></img>
+            <img src={Back2} style={{width:'100%', marginTop:'2px', height:'200px'}} alt=""></img>
         </div>
     )
 }

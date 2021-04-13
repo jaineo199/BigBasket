@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
+        width:'100%'
       },
       cardsize :{
          
@@ -35,8 +36,8 @@ const useStyles = makeStyles((theme) => ({
         padding: '1px',
         borderRadius: '50%',
         
-        maxWidth: '80%',
-        maxHeight: '50%',
+        maxWidth: '100%',
+        maxHeight: '60%',
       },
 }));
 
@@ -49,7 +50,7 @@ export default function AutoGrid() {
        
     <Grid container spacing={0} >
  
-      <Grid item xs={6}  >
+      <Grid item xs={4}  >
     
       <CardActionArea>
 
@@ -63,7 +64,7 @@ export default function AutoGrid() {
       </CardActionArea>
     
       </Grid>
-      <Grid item xs={6} >
+      <Grid item xs={4} >
      
       <CardActionArea>
 
@@ -76,7 +77,34 @@ export default function AutoGrid() {
       </CardActionArea>
  
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={4}  >
+    
+    <CardActionArea>
+
+      <CardContent>
+          <Paper>
+      <img className={classes.img}  src={onion }/>
+      </Paper>
+        
+      </CardContent>
+      
+    </CardActionArea>
+  
+    </Grid>
+    <Grid item xs={4} >
+     
+     <CardActionArea>
+
+       <CardContent>
+           <Paper>   <img className={classes.img}  src={orange}/> </Paper>
+     
+     
+       </CardContent>
+      
+     </CardActionArea>
+
+     </Grid>
+      <Grid item xs={4}>
      
       <CardActionArea>
 
@@ -91,7 +119,48 @@ export default function AutoGrid() {
       </Grid>
      
    
-      <Grid item xs={6}>
+      <Grid item xs={4}>
+      
+      <CardActionArea>
+
+        <CardContent>
+            <Paper>    <img className={classes.img} src={palak}/> </Paper>
+     
+       
+        </CardContent>
+       
+      </CardActionArea>
+  
+      </Grid>
+      <Grid item xs={4}>
+     
+      <CardActionArea>
+
+        <CardContent>
+            <Paper>      <img className={classes.img}  src={potato }/> </Paper>
+   
+      
+        </CardContent>
+       
+      </CardActionArea>
+    
+      </Grid>
+
+      <Grid item xs={4}>
+      
+      <CardActionArea>
+
+        <CardContent>
+            <Paper>    <img className={classes.img} src={palak}/> </Paper>
+     
+       
+        </CardContent>
+       
+      </CardActionArea>
+  
+      </Grid>
+
+      <Grid item xs={4}>
       
       <CardActionArea>
 

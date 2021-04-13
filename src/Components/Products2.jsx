@@ -41,7 +41,7 @@ export default function ComplexGrid() {
       <Paper className={classes.paper}>
           <ProductGrid/>
         <Grid container spacing={1}>
-          <Grid item>
+          <Grid item style={{marginLeft:'75px'}}>
             <ButtonBase className={classes.image}>
               <img className={classes.img} alt="complex" src={orange} />
               <Typography style={{float:'inline', padding:'5px', marginLeft:'15px'}}> Fresh carrot <br/> <br/>
@@ -53,7 +53,7 @@ export default function ComplexGrid() {
            
           </Grid>
           <Grid item xs={12} lg container style={{width: '100%'}}>
-              <paper style={{backgroundColor:'#deddd9',}}>
+              <paper style={{backgroundColor:'#deddd9', width: '100%'}}>
             <Grid item xs container direction="column" spacing={1}>
               <Grid item xs>
                 <Typography gutterBottom variant="subtitle1">

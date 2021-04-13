@@ -5,7 +5,7 @@ function myimg1() {
     return (
         <div>
     
-            <img src={Back1} style={{width:'100%'}} alt=""></img>
+            <img src={Back1} style={{width:'100%', height:'200px'}} alt=""></img>
         </div>
     )
 }
